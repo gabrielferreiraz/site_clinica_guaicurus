@@ -342,16 +342,17 @@ p {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   border: 1px solid var(--border-color);
-  transition: transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
   color: var(--text-color);
   text-decoration: none;
   cursor: pointer;
   position: relative;
 }
-.click-hint-icon {
+.click-hint-top {
   position: absolute;
-  bottom: 8px;
-  right: 8px;
+  bottom: 6px;
+  left: 50%;
+  margin-left: -14px;
   width: 28px;
   height: auto;
   pointer-events: none;
@@ -360,14 +361,14 @@ p {
 }
 @keyframes click-hint-bounce {
   0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(10px) scale(0.9); }
+  50% { transform: translateY(8px) scale(0.95); }
 }
 .service-action-card:active {
   transform: scale(0.97);
 }
 .service-action-card:hover, .service-action-card:focus-visible {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* Custom user conversion shadow */
   border-color: var(--primary-light);
   outline: none;
 }
