@@ -51,15 +51,23 @@
         --bg-color: #ffffff;
         --bg-alt: #f9fafb;
       }
-      * { box-sizing: border-box; }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
       html, body {
         margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        max-width: 100%;
         font-family: 'Inter', sans-serif;
         color: var(--text-color);
         background-color: var(--bg-color);
         -webkit-font-smoothing: antialiased;
-        overflow-x: hidden;
-        width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+      img, iframe {
+        max-width: 100%;
+        height: auto;
+        display: block;
       }
       .navbar {
         position: fixed;
