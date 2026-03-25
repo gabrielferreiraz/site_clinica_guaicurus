@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="icon" type="image/webp" href="/logo-200.webp" />
+    <link rel="preload" as="image" href="/interior_clinica-1200.webp" media="(min-width: 769px)" />
+    <link rel="preload" as="image" href="/interior_clinica-600.webp" media="(max-width: 768px)" />
     
     <script type="application/ld+json">
     {
@@ -148,7 +150,7 @@
   <body>
     <header class="navbar">
       <a href="#" class="logo">
-        <img src="/logo.png" alt="Logo Clínica Guaicurus" class="header-logo" />
+        <img src="/logo-200.webp" alt="Logo Clínica Guaicurus" class="header-logo" width="200" height="auto" />
         Clínica Guaicurus
       </a>
       <nav class="nav-links desktop-only">
@@ -168,7 +170,7 @@
     <div class="mobile-menu" id="mobile-menu">
       <div class="mobile-menu-header">
         <span class="logo">
-          <img src="/logo.png" alt="Logo Clínica" class="header-logo" />
+          <img src="/logo-200.webp" alt="Logo Clínica Guaicurus" class="header-logo" width="200" height="auto" />
           Menu
         </span>
         <button class="mobile-menu-close" id="mobile-menu-close"><i class="ph ph-x"></i></button>
@@ -203,7 +205,11 @@
         </div>
         <div class="hero-visual desktop-only">
           <div class="image-mock">
-            <img src="/interior_clinica.png" alt="Recepção e interior da Clínica Guaicurus" loading="lazy" />
+            <img src="/interior_clinica-1200.webp" 
+                 srcset="/interior_clinica-600.webp 600w, /interior_clinica-1200.webp 1200w" 
+                 sizes="(max-width: 768px) 100vw, 50vw" 
+                 alt="Recepção e interior da Clínica Guaicurus" 
+                 fetchpriority="high" />
           </div>
           <div class="floating-badge">
             <div class="stars">
@@ -323,7 +329,11 @@
             </div>
             <div class="layout-image">
               <div class="image-mock placeholder-diff">
-                <img src="/interior_clinica2.png" alt="Ambiente limpo e confortável da clínica" loading="lazy" />
+                <img src="/interior_clinica2-600.webp" 
+                     srcset="/interior_clinica2-400.webp 400w, /interior_clinica2-600.webp 600w" 
+                     sizes="(max-width: 768px) 100vw, 50vw" 
+                     alt="Ambiente limpo e confortável da clínica" 
+                     loading="lazy" />
               </div>
             </div>
           </div>
@@ -343,7 +353,11 @@
             </div>
             <div class="layout-image">
                <div class="image-mock placeholder-about">
-                 <img src="/clinica_por_fora.png" alt="Edifício e fachada da Clínica Guaicurus" loading="lazy" />
+                 <img src="/clinica_por_fora-600.webp" 
+                      srcset="/clinica_por_fora-400.webp 400w, /clinica_por_fora-600.webp 600w" 
+                      sizes="(max-width: 768px) 100vw, 50vw" 
+                      alt="Edifício e fachada da Clínica Guaicurus" 
+                      loading="lazy" />
                </div>
             </div>
           </div>
