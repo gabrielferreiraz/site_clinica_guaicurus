@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>Clínica em Campo Grande MS | Clínica Guaicurus Medicina, Odontologia e Exames</title>
-    <meta name="description" content="Clínica completa em Campo Grande MS com atendimento humanizado. Consultas, odontologia e exames com profissionais qualificados. Agende pelo WhatsApp.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="icon" type="image/webp" href="/logo-200.webp" />
-    <link rel="preload" as="image" href="/interior_clinica-1200.webp" media="(min-width: 769px)" />
-    <link rel="preload" as="image" href="/interior_clinica-600.webp" media="(max-width: 768px)" />
-    
-    <script type="application/ld+json">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Clínica em Campo Grande MS | Clínica Guaicurus Medicina, Odontologia e Exames</title>
+  <meta name="description"
+    content="Clínica completa em Campo Grande MS com atendimento humanizado. Consultas, odontologia e exames com profissionais qualificados. Agende pelo WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="icon" type="image/webp" href="/logo-200.webp" />
+  <link rel="preload" as="image" href="/interior_clinica-1200.webp" media="(min-width: 769px)" />
+  <link rel="preload" as="image" href="/interior_clinica-600.webp" media="(max-width: 768px)" />
+
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MedicalClinic",
@@ -39,491 +41,582 @@
       "sameAs": []
     }
     </script>
-    <style>
-      /* Critical CSS for Hero */
-      :root {
-        --primary: #1E3A8A; 
-        --primary-light: #eff6ff;
-        --secondary: #10B981; 
-        --secondary-dark: #059669;
-        --text-color: #1f2937;
-        --text-light: #4b5563;
-        --bg-color: #ffffff;
-        --bg-alt: #f9fafb;
+  <style>
+    /* Critical CSS for Hero */
+    :root {
+      --primary: #1E3A8A;
+      --primary-light: #eff6ff;
+      --secondary: #10B981;
+      --secondary-dark: #059669;
+      --text-color: #1f2937;
+      --text-light: #4b5563;
+      --bg-color: #ffffff;
+      --bg-alt: #f9fafb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      max-width: 100%;
+      font-family: 'Inter', sans-serif;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      -webkit-font-smoothing: antialiased;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    img,
+    iframe {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .brand-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.1;
+    }
+
+    .brand-slogan {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 0.125rem;
+    }
+
+    .header-logo {
+      height: 55px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .hero {
+      padding: 8rem 5% 4rem;
+      background: linear-gradient(135deg, var(--primary-light) 0%, #ffffff 100%);
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    .hero-content {
+      flex: 1;
+      max-width: 600px;
+    }
+
+    .hero-title {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .hero-description {
+      font-size: 1.125rem;
+      color: var(--text-light);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: var(--secondary);
+      color: white;
+      box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.2);
+      font-size: 1.1rem;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--secondary-dark);
+      transform: translateY(-2px);
+    }
+
+    .desktop-only {
+      display: flex;
+    }
+
+    .mobile-only {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding-top: 7rem;
+        min-height: auto;
+        flex-direction: column;
       }
-      * { box-sizing: border-box; margin: 0; padding: 0; }
-      html, body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-        max-width: 100%;
-        font-family: 'Inter', sans-serif;
-        color: var(--text-color);
-        background-color: var(--bg-color);
-        -webkit-font-smoothing: antialiased;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
+
+      .hero-title {
+        font-size: 1.875rem;
       }
-      img, iframe {
-        max-width: 100%;
-        height: auto;
+
+      .desktop-only {
+        display: none !important;
+      }
+
+      .mobile-only {
         display: block;
       }
-      .navbar {
-        position: fixed;
-        top: 0; left: 0; right: 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 5%;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        z-index: 1000;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-      }
-      .logo {
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-      }
-      .brand-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-      .brand-name {
-        font-size: 1.25rem;
-        font-weight: 700;
-        color: var(--primary);
-        line-height: 1.1;
-      }
-      .brand-slogan {
-        font-size: 0.7rem;
-        font-weight: 500;
-        color: var(--text-light);
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        margin-top: 0.125rem;
-      }
-      .header-logo {
-        height: 55px;
-        width: auto;
-        object-fit: contain;
-      }
-      .hero {
-        padding: 8rem 5% 4rem;
-        background: linear-gradient(135deg, var(--primary-light) 0%, #ffffff 100%);
-        min-height: 80vh;
-        display: flex;
-        align-items: center;
-        gap: 4rem;
-      }
-      .hero-content {
-        flex: 1;
-        max-width: 600px;
-      }
-      .hero-title {
-        font-size: 2.25rem;
-        font-weight: 700;
-        color: var(--primary);
-        line-height: 1.2;
-        margin-bottom: 1rem;
-      }
-      .hero-description {
-        font-size: 1.125rem;
-        color: var(--text-light);
-        margin-bottom: 2rem;
-        line-height: 1.6;
-      }
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.875rem 1.5rem;
-        border-radius: 9999px;
-        font-weight: 600;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        border: none;
-        cursor: pointer;
-      }
-      .btn-primary {
-        background-color: var(--secondary);
-        color: white;
-        box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.2);
-        font-size: 1.1rem;
-      }
-      .btn-primary:hover {
-        background-color: var(--secondary-dark);
-        transform: translateY(-2px);
-      }
-      .desktop-only { display: flex; }
-      .mobile-only { display: none; }
-      @media (max-width: 768px) {
-        .hero {
-          padding-top: 7rem;
-          min-height: auto;
-          flex-direction: column;
-        }
-        .hero-title { font-size: 1.875rem; }
-        .desktop-only { display: none !important; }
-        .mobile-only { display: block; }
-      }
-    </style>
-    <link rel="stylesheet" href="/src/style.css">
-  </head>
-  <body>
-    <header class="navbar">
-      <a href="#" class="logo">
-        <img src="/logo-200.webp" alt="Logo Clínica Guaicurus" class="header-logo" width="200" height="auto" />
-        <div class="brand-text">
-          <span class="brand-name">Clínica Guaicurus</span>
-          <span class="brand-slogan">Saúde integrada</span>
-        </div>
-      </a>
-      <nav class="nav-links desktop-only">
-        <a href="#servicos">Serviços</a>
-        <a href="#diferenciais">Diferenciais</a>
-        <a href="#sobre">Sobre nós</a>
-        <a href="#avaliacoes">Avaliações</a>
-      </nav>
-      <a href="https://wa.me/5567996973773?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="btn btn-primary nav-cta desktop-only" target="_blank" rel="noopener">
-        <i class="ph-fill ph-whatsapp-logo"></i> Agendar
-      </a>
-      <button class="hamburger mobile-only" aria-label="Menu" id="mobile-menu-btn">
-        <i class="ph ph-list" style="font-size: 1.8rem;"></i>
-      </button>
-    </header>
+    }
+  </style>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
 
-    <div class="mobile-menu" id="mobile-menu">
-      <div class="mobile-menu-header">
-        <span class="logo">
-          <img src="/logo-200.webp" alt="Logo Clínica Guaicurus" class="header-logo" width="200" height="auto" />
-          Menu
-        </span>
-        <button class="mobile-menu-close" id="mobile-menu-close"><i class="ph ph-x"></i></button>
+<body>
+  <header class="navbar">
+    <a href="#" class="logo">
+      <img src="/logo-200.webp" alt="Logo Clínica Guaicurus" class="header-logo" width="200" height="auto" />
+      <div class="brand-text">
+        <span class="brand-name">Clínica Guaicurus</span>
+        <span class="brand-slogan">Saúde integrada</span>
       </div>
-      <nav class="mobile-nav">
-        <a href="#servicos" class="mobile-link">Serviços</a>
-        <a href="#diferenciais" class="mobile-link">Diferenciais</a>
-        <a href="#sobre" class="mobile-link">Sobre nós</a>
-        <a href="#avaliacoes" class="mobile-link">Avaliações</a>
-        <a href="#localizacao" class="mobile-link">Localização</a>
-      </nav>
-      <a href="https://wa.me/5567996973773?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="btn btn-primary mobile-menu-cta" target="_blank" rel="noopener">
-        <i class="ph-fill ph-whatsapp-logo"></i> Agendar Consulta
-      </a>
+    </a>
+    <nav class="nav-links desktop-only">
+      <a href="#servicos">Serviços</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#sobre">Sobre nós</a>
+      <a href="#avaliacoes">Avaliações</a>
+    </nav>
+    <a href="https://wa.me/5567996973773?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta"
+      class="btn btn-primary nav-cta desktop-only" target="_blank" rel="noopener">
+      <i class="ph-fill ph-whatsapp-logo"></i> Agendar
+    </a>
+    <button class="hamburger mobile-only" aria-label="Menu" id="mobile-menu-btn">
+      <i class="ph ph-list" style="font-size: 1.8rem;"></i>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-header">
+      <span class="logo">
+        <img src="/logo-200.webp" alt="Logo Clínica Guaicurus" class="header-logo" width="200" height="auto" />
+        Menu
+      </span>
+      <button class="mobile-menu-close" id="mobile-menu-close"><i class="ph ph-x"></i></button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="#servicos" class="mobile-link">Serviços</a>
+      <a href="#diferenciais" class="mobile-link">Diferenciais</a>
+      <a href="#sobre" class="mobile-link">Sobre nós</a>
+      <a href="#avaliacoes" class="mobile-link">Avaliações</a>
+      <a href="#localizacao" class="mobile-link">Localização</a>
+    </nav>
+    <a href="https://wa.me/5567996973773?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta"
+      class="btn btn-primary mobile-menu-cta" target="_blank" rel="noopener">
+      <i class="ph-fill ph-whatsapp-logo"></i> Agendar Consulta
+    </a>
+  </div>
+
+  <!-- 1. Hero Section -->
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="badge-trust">
+          <i class="ph-fill ph-shield-check"></i> Qualidade Comprovada por Pacientes
+        </div>
+        <h1 class="hero-title">Clínica Médica e Odontológica em Campo Grande MS com Atendimento Humanizado</h1>
+        <p class="hero-description">Clínica completa com consultas, odontologia e exames laboratoriais e de imagem.
+          Nossa equipe é altamente avaliada para oferecer o cuidado que você merece.</p>
+        <div class="cta-group">
+          <a href="https://wa.me/5567996973773?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta"
+            class="btn btn-primary btn-large" target="_blank" rel="noopener">
+            <i class="ph-fill ph-whatsapp-logo"></i> Agendar Consulta
+          </a>
+          <span class="microcopy"><i class="ph ph-clock"></i> Resposta rápida pelo WhatsApp</span>
+        </div>
+      </div>
+      <div class="hero-visual desktop-only">
+        <div class="image-mock">
+          <img src="/interior_clinica-1200.webp"
+            srcset="/interior_clinica-600.webp 600w, /interior_clinica-1200.webp 1200w"
+            sizes="(max-width: 768px) 100vw, 50vw" alt="Recepção e interior da Clínica Guaicurus"
+            fetchpriority="high" />
+        </div>
+        <div class="floating-badge">
+          <div class="stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <span class="rating-text">4.9/5 (288 avaliações)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Social Proof Bar -->
+    <div class="social-proof-bar">
+      <div class="container auto-grid">
+        <div class="proof-item">
+          <i class="ph-fill ph-google-logo" style="color: #4285F4;"></i>
+          <div class="proof-text">
+            <strong>4.9 de 5.0 estrelas</strong>
+            <span>Mais de 288 pacientes satisfeitos</span>
+          </div>
+        </div>
+        <div class="proof-item">
+          <i class="ph ph-users" style="color: var(--primary);"></i>
+          <div class="proof-text">
+            <strong>Atendimento Humanizado</strong>
+            <span>Foco no seu bem-estar</span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- 1. Hero Section -->
-    <main>
-      <section class="hero">
-        <div class="hero-content">
-          <div class="badge-trust">
-            <i class="ph-fill ph-shield-check"></i> Qualidade Comprovada por Pacientes
-          </div>
-          <h1 class="hero-title">Clínica Médica e Odontológica em Campo Grande MS com Atendimento Humanizado</h1>
-          <p class="hero-description">Clínica completa com consultas, odontologia e exames laboratoriais e de imagem. Nossa equipe é altamente avaliada para oferecer o cuidado que você merece.</p>
-          <div class="cta-group">
-            <a href="https://wa.me/5567996973773?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="btn btn-primary btn-large" target="_blank" rel="noopener">
-              <i class="ph-fill ph-whatsapp-logo"></i> Agendar Consulta
-            </a>
-            <span class="microcopy"><i class="ph ph-clock"></i> Resposta rápida pelo WhatsApp</span>
-          </div>
+    <!-- 3. Services -->
+    <section class="section bg-light" id="servicos">
+      <div class="container">
+        <div class="section-header text-center" style="margin-bottom: 2.5rem;">
+          <h2 class="section-title">Escolha o atendimento que você precisa</h2>
+          <p class="section-subtitle" style="margin-bottom: 1rem;">Clique em um atendimento abaixo para falar agora no
+            WhatsApp</p>
+          <img src="/cursor-finger-click.svg" class="click-hint-top" alt="Indicador de clique" aria-hidden="true" />
         </div>
-        <div class="hero-visual desktop-only">
-          <div class="image-mock">
-            <img src="/interior_clinica-1200.webp" 
-                 srcset="/interior_clinica-600.webp 600w, /interior_clinica-1200.webp 1200w" 
-                 sizes="(max-width: 768px) 100vw, 50vw" 
-                 alt="Recepção e interior da Clínica Guaicurus" 
-                 fetchpriority="high" />
-          </div>
-          <div class="floating-badge">
-            <div class="stars">
-              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
-            </div>
-            <span class="rating-text">4.9/5 (288 avaliações)</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- 2. Social Proof Bar -->
-      <div class="social-proof-bar">
-        <div class="container auto-grid">
-          <div class="proof-item">
-            <i class="ph-fill ph-google-logo" style="color: #4285F4;"></i>
-            <div class="proof-text">
-              <strong>4.9 de 5.0 estrelas</strong>
-              <span>Mais de 288 pacientes satisfeitos</span>
-            </div>
-          </div>
-          <div class="proof-item">
-            <i class="ph ph-users" style="color: var(--primary);"></i>
-            <div class="proof-text">
-              <strong>Atendimento Humanizado</strong>
-              <span>Foco no seu bem-estar</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3. Services -->
-      <section class="section bg-light" id="servicos">
-        <div class="container">
-          <div class="section-header text-center" style="margin-bottom: 2.5rem;">
-            <h2 class="section-title">Escolha o atendimento que você precisa</h2>
-            <p class="section-subtitle" style="margin-bottom: 1rem;">Clique em um atendimento abaixo para falar agora no WhatsApp 👉</p>
-            <img src="/cursor-finger-click.svg" class="click-hint-top" alt="Indicador de clique" aria-hidden="true" />
-          </div>
-          <div class="services-grid">
-            <a href="https://wa.me/5567996973773?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20oftalmologista" class="service-action-card" target="_blank" rel="noopener" aria-label="Agendar Oftalmologia via WhatsApp">
-              <div class="card-icon"><i class="ph ph-eye"></i></div>
-              <h3>Oftalmologia</h3>
-              <p>Agendar consulta</p>
-            </a>
-            <a href="https://wa.me/5567996973773?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20fisioterapia" class="service-action-card" target="_blank" rel="noopener" aria-label="Agendar Fisioterapia via WhatsApp">
-              <div class="card-icon"><i class="ph ph-wheelchair"></i></div>
-              <h3>Fisioterapia</h3>
-              <p>Agendar sessão</p>
-            </a>
-            <a href="https://wa.me/5567996973773?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20psic%C3%B3logo" class="service-action-card" target="_blank" rel="noopener" aria-label="Agendar Psicologia via WhatsApp">
-              <div class="card-icon"><i class="ph ph-brain"></i></div>
-              <h3>Psicologia</h3>
-              <p>Agendar consulta</p>
-            </a>
-            <a href="https://wa.me/5567996973773?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20psiquiatra" class="service-action-card" target="_blank" rel="noopener" aria-label="Agendar Psiquiatria via WhatsApp">
-              <div class="card-icon"><i class="ph ph-head-circuit"></i></div>
-              <h3>Psiquiatria</h3>
-              <p>Agendar consulta</p>
-            </a>
-            <a href="https://wa.me/5567996973773?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20ultrassonografia" class="service-action-card" target="_blank" rel="noopener" aria-label="Informações sobre Ultrassonografia via WhatsApp">
-              <div class="card-icon"><i class="ph ph-waves"></i></div>
-              <h3>Ultrassonografia</h3>
-              <p>Mais informações</p>
-            </a>
-            <a href="https://wa.me/5567996973773?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20eletrocardiograma" class="service-action-card" target="_blank" rel="noopener" aria-label="Agendar Eletrocardiograma via WhatsApp">
-              <div class="card-icon"><i class="ph ph-heartbeat"></i></div>
-              <h3>Eletrocardiograma</h3>
-              <p>Fazer exame</p>
-            </a>
-            <a href="https://wa.me/5567996973773?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20ginecologista" class="service-action-card" target="_blank" rel="noopener" aria-label="Agendar Ginecologia via WhatsApp">
-              <div class="card-icon"><i class="ph ph-gender-female"></i></div>
-              <h3>Ginecologia</h3>
-              <p>Agendar consulta</p>
-            </a>
-            <a href="https://wa.me/5567996973773?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20cl%C3%ADnico%20geral" class="service-action-card" target="_blank" rel="noopener" aria-label="Agendar Clínico Geral via WhatsApp">
-              <div class="card-icon"><i class="ph ph-stethoscope"></i></div>
-              <h3>Clínico Geral</h3>
-              <p>Agendar consulta</p>
-            </a>
-            <a href="https://wa.me/5567996973773?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20exames%20laboratoriais" class="service-action-card" target="_blank" rel="noopener" aria-label="Informações sobre Exames Laboratoriais via WhatsApp">
-              <div class="card-icon"><i class="ph ph-test-tube"></i></div>
-              <h3>Exames laboratoriais</h3>
-              <p>Mais informações</p>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- 4. Differentials -->
-      <section class="section" id="diferenciais">
-        <div class="container">
-          <div class="split-layout">
-            <div class="layout-text">
-              <h2 class="section-title">Por que escolher a Clínica Guaicurus?</h2>
-              <ul class="features-list">
-                <li>
-                  <i class="ph-fill ph-check-circle"></i>
-                  <div>
-                    <strong>Profissionais altamente avaliados pelos pacientes</strong>
-                    <p>Competência técnica unida ao dom de cuidar, destacado em centenas de avaliações.</p>
-                  </div>
-                </li>
-                <li>
-                  <i class="ph-fill ph-check-circle"></i>
-                  <div>
-                    <strong>Ambiente reconhecido pela limpeza e conforto</strong>
-                    <p>Você será recebido em um espaço que transmite paz e assepsia integral.</p>
-                  </div>
-                </li>
-                <li>
-                  <i class="ph-fill ph-check-circle"></i>
-                  <div>
-                    <strong>Atendimento que prioriza acolhimento real</strong>
-                    <p>Sua consulta não é apenas um número. Aqui o atendimento humano e de alta empatia é cultural.</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="layout-image">
-              <div class="image-mock placeholder-diff">
-                <img src="/interior_clinica2-600.webp" 
-                     srcset="/interior_clinica2-400.webp 400w, /interior_clinica2-600.webp 600w" 
-                     sizes="(max-width: 768px) 100vw, 50vw" 
-                     alt="Ambiente limpo e confortável da clínica" 
-                     loading="lazy" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 5. About Authority -->
-      <section class="section bg-light" id="sobre">
-        <div class="container">
-          <div class="split-layout reverse">
-            <div class="layout-text">
-              <span class="badge">Nossa Essência</span>
-              <h2 class="section-title">Cuidado que vai além do atendimento</h2>
-              <p>Na Clínica Guaicurus, você não é apenas mais um paciente.</p>
-              <p>Nosso foco está em oferecer um atendimento organizado, ágil e realmente atencioso — desde o primeiro contato até a finalização do seu exame ou consulta.</p>
-              <p>Ambiente limpo, equipe preparada e um padrão de atendimento que prioriza respeito, clareza e atenção em cada detalhe.</p>
-            </div>
-            <div class="layout-image">
-               <div class="image-mock placeholder-about">
-                 <img src="/clinica_por_fora-600.webp" 
-                      srcset="/clinica_por_fora-400.webp 400w, /clinica_por_fora-600.webp 600w" 
-                      sizes="(max-width: 768px) 100vw, 50vw" 
-                      alt="Edifício e fachada da Clínica Guaicurus" 
-                      loading="lazy" />
-               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 5.5 Fast WhatsApp Promise (Addressing inconsistency issue) -->
-      <section class="section whatsapp-promise">
-        <div class="container text-center">
-          <div class="promise-box">
-            <div class="promise-icon"><i class="ph-fill ph-rocket-launch"></i></div>
-            <h2>Atendimento Rápido e Organizado</h2>
-            <p>Nós sabemos que a sua saúde não pode esperar. Por isso, reestruturamos nosso atendimento via WhatsApp. Contamos com um <strong>fluxo de triagem inteligente e equipe pronta</strong> para garantir que você receba uma resposta ágil e objetiva assim que enviar a sua mensagem.</p>
-            <a href="https://wa.me/5567996973773?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="btn btn-primary mt-2" target="_blank" rel="noopener">
-              <i class="ph-fill ph-whatsapp-logo"></i> Teste a nossa rapidez agora
-            </a>
-            <span class="microcopy mt-1 d-block"><i class="ph ph-clock"></i> Agende em menos de 1 minuto</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- 6. Reviews -->
-      <section class="section" id="avaliacoes">
-        <div class="container">
-          <div class="section-header text-center">
-            <h2 class="section-title">O que dizem nossos pacientes</h2>
-            <p class="section-subtitle">A confiança de quem já experimentou o nosso acolhimento.</p>
-          </div>
-          <div class="grid reviews-grid">
-            <div class="review-card">
-              <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
-              <p class="review-text">"Ambiente limpo e super aconchegante! Fiquei impressionada com o carinho desde a recepção até a consulta. O atendimento é realmente humanizado."</p>
-              <span class="review-author">Gabriela Souza</span>
-            </div>
-            <div class="review-card">
-              <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
-              <p class="review-text">"Os profissionais são excepcionais, muito atenciosos e competentes. Passam uma segurança que a gente raramente vê. Recomendo de olhos fechados!"</p>
-              <span class="review-author">Marcos Antônio</span>
-            </div>
-            <div class="review-card">
-              <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
-              <p class="review-text">"A agilidade nos exames me surpreendeu. Tudo organizado, lugar maravilhoso e a recepção muito educada. Clínica excelente."</p>
-              <span class="review-author">Juliana Freitas</span>
-            </div>
-          </div>
-          <div class="text-center mt-4">
-             <a href="https://wa.me/5567996973773?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="btn btn-primary" target="_blank" rel="noopener">
-              <i class="ph-fill ph-whatsapp-logo"></i> Fazer seu Agendamento
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- 7. FAQ -->
-      <section class="section bg-light" id="faq">
-        <div class="container max-w-md mx-auto">
-          <div class="section-header text-center">
-            <h2 class="section-title">Perguntas Frequentes</h2>
-          </div>
-          <div class="faq-accordion">
-            <div class="faq-item">
-              <button class="faq-question">Vocês aceitam convênio médico e odontológico? <i class="ph ph-caret-down"></i></button>
-              <div class="faq-answer"><p>Atendemos diversos convênios e também oferecemos condições especiais para consultas particulares. Entre em contato via WhatsApp para confirmar se o seu plano é aceito.</p></div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-question">Como faço para agendar uma consulta? <i class="ph ph-caret-down"></i></button>
-              <div class="faq-answer"><p>Você pode agendar de forma rápida clicando em qualquer botão de WhatsApp. Nossa equipe utiliza um sistema de triagem ágil para garantir seu agendamento em instantes.</p></div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-question">Quais tipos de exames vocês realizam? <i class="ph ph-caret-down"></i></button>
-              <div class="faq-answer"><p>Realizamos uma ampla gama de exames laboratoriais completos (sangue, urina, etc) e também principais exames de imagem. Tudo centralizado para sua comodidade.</p></div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-question">Qual é o horário de atendimento? <i class="ph ph-caret-down"></i></button>
-              <div class="faq-answer"><p>Atendemos de segunda a sábado. Ficamos abertos até as 11:00, e reabrimos no período da tarde, a partir das 13:00.</p></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 8. Location -->
-      <section class="section" id="localizacao">
-        <div class="container">
-          <div class="split-layout">
-            <div class="layout-text">
-              <h2 class="section-title">Onde Estamos</h2>
-              <p>Venha nos visitar em um espaço moderno e aconchegante preparado especialmente para você e sua família.</p>
-              <div class="contact-info">
-                <p><i class="ph-fill ph-map-pin"></i> Av. Guaicurus, 1383 - Jardim Universitário, Campo Grande - MS, 79063-080</p>
-                <p><i class="ph-fill ph-clock"></i> Segunda a Sábado<br><span style="padding-left: 24px;">07:00 às 11:00 - 13:00 às 18:00</span></p>
-                <p><i class="ph-fill ph-phone"></i> (67) 99697-3773</p>
-              </div>
-              <a href="https://maps.google.com/?q=Av.+Guaicurus,+1383+-+Jardim+Universitário,+Campo+Grande+-+MS,+79063-080" target="_blank" rel="noopener" class="btn btn-outline mt-2">
-                <i class="ph ph-map-trifold"></i> Traçar Rota no Mapa
-              </a>
-            </div>
-            <div class="layout-image map-container">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3736.2646!2d-54.5939763!3d-20.5054942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDMwJzE5LjgiUyA1NMKwMzUnMzguMyJX!5e0!3m2!1spt-BR!2sbr!4v1600000000000" width="100%" height="400" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container footer-content">
-        <div class="footer-brand">
-          <h3>Clínica Guaicurus</h3>
-          <p>Medicina, Odontologia e Exames.</p>
-          <p class="mt-2 text-sm">O cuidado que você merece em Campo Grande.</p>
-        </div>
-        <div class="footer-links">
-          <h4>Acesso Rápido</h4>
-          <a href="#servicos">Serviços</a>
-          <a href="#diferenciais">Diferenciais</a>
-          <a href="#avaliacoes">Avaliações</a>
-        </div>
-        <div class="footer-cta text-center">
-          <p class="mb-2">Pronto para agendar?</p>
-          <a href="https://wa.me/5567996973773?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="btn btn-primary" target="_blank" rel="noopener">
-            <i class="ph-fill ph-whatsapp-logo"></i> Falar no WhatsApp
+        <div class="services-grid">
+          <a href="https://wa.me/5567996973773?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20oftalmologista"
+            class="service-action-card" target="_blank" rel="noopener" aria-label="Agendar Oftalmologia via WhatsApp">
+            <div class="card-icon"><i class="ph ph-eye"></i></div>
+            <h3>Oftalmologia</h3>
+            <p>Agendar consulta</p>
+          </a>
+          <a href="https://wa.me/5567996973773?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20fisioterapia"
+            class="service-action-card" target="_blank" rel="noopener" aria-label="Agendar Fisioterapia via WhatsApp">
+            <div class="card-icon"><i class="ph ph-wheelchair"></i></div>
+            <h3>Fisioterapia</h3>
+            <p>Agendar sessão</p>
+          </a>
+          <a href="https://wa.me/5567996973773?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20psic%C3%B3logo"
+            class="service-action-card" target="_blank" rel="noopener" aria-label="Agendar Psicologia via WhatsApp">
+            <div class="card-icon"><i class="ph ph-brain"></i></div>
+            <h3>Psicologia</h3>
+            <p>Agendar consulta</p>
+          </a>
+          <a href="https://wa.me/5567996973773?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20psiquiatra"
+            class="service-action-card" target="_blank" rel="noopener" aria-label="Agendar Psiquiatria via WhatsApp">
+            <div class="card-icon"><i class="ph ph-head-circuit"></i></div>
+            <h3>Psiquiatria</h3>
+            <p>Agendar consulta</p>
+          </a>
+          <a href="https://wa.me/5567996973773?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20ultrassonografia"
+            class="service-action-card" target="_blank" rel="noopener"
+            aria-label="Informações sobre Ultrassonografia via WhatsApp">
+            <div class="card-icon"><i class="ph ph-waves"></i></div>
+            <h3>Ultrassonografia</h3>
+            <p>Mais informações</p>
+          </a>
+          <a href="https://wa.me/5567996973773?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20eletrocardiograma"
+            class="service-action-card" target="_blank" rel="noopener"
+            aria-label="Agendar Eletrocardiograma via WhatsApp">
+            <div class="card-icon"><i class="ph ph-heartbeat"></i></div>
+            <h3>Eletrocardiograma</h3>
+            <p>Fazer exame</p>
+          </a>
+          <a href="https://wa.me/5567996973773?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20ginecologista"
+            class="service-action-card" target="_blank" rel="noopener" aria-label="Agendar Ginecologia via WhatsApp">
+            <div class="card-icon"><i class="ph ph-gender-female"></i></div>
+            <h3>Ginecologia</h3>
+            <p>Agendar consulta</p>
+          </a>
+          <a href="https://wa.me/5567996973773?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20cl%C3%ADnico%20geral"
+            class="service-action-card" target="_blank" rel="noopener" aria-label="Agendar Clínico Geral via WhatsApp">
+            <div class="card-icon"><i class="ph ph-stethoscope"></i></div>
+            <h3>Clínico Geral</h3>
+            <p>Agendar consulta</p>
+          </a>
+          <a href="https://wa.me/5567996973773?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20exames%20laboratoriais"
+            class="service-action-card" target="_blank" rel="noopener"
+            aria-label="Informações sobre Exames Laboratoriais via WhatsApp">
+            <div class="card-icon"><i class="ph ph-test-tube"></i></div>
+            <h3>Exames laboratoriais</h3>
+            <p>Mais informações</p>
           </a>
         </div>
       </div>
-      <div class="footer-bottom text-center">
-        <p>&copy; <script>document.write(new Date().getFullYear())</script> Clínica Guaicurus. Todos os direitos reservados.</p>
+    </section>
+
+    <!-- 4. Differentials -->
+    <section class="section" id="diferenciais">
+      <div class="container">
+        <div class="split-layout">
+          <div class="layout-text">
+            <h2 class="section-title">Por que escolher a Clínica Guaicurus?</h2>
+            <ul class="features-list">
+              <li>
+                <i class="ph-fill ph-check-circle"></i>
+                <div>
+                  <strong>Profissionais altamente avaliados pelos pacientes</strong>
+                  <p>Competência técnica unida ao dom de cuidar, destacado em centenas de avaliações.</p>
+                </div>
+              </li>
+              <li>
+                <i class="ph-fill ph-check-circle"></i>
+                <div>
+                  <strong>Ambiente reconhecido pela limpeza e conforto</strong>
+                  <p>Você será recebido em um espaço que transmite paz e assepsia integral.</p>
+                </div>
+              </li>
+              <li>
+                <i class="ph-fill ph-check-circle"></i>
+                <div>
+                  <strong>Atendimento que prioriza acolhimento real</strong>
+                  <p>Sua consulta não é apenas um número. Aqui o atendimento humano e de alta empatia é cultural.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="layout-image">
+            <div class="image-mock placeholder-diff">
+              <img src="/interior_clinica2-600.webp"
+                srcset="/interior_clinica2-400.webp 400w, /interior_clinica2-600.webp 600w"
+                sizes="(max-width: 768px) 100vw, 50vw" alt="Ambiente limpo e confortável da clínica" loading="lazy" />
+            </div>
+          </div>
+        </div>
       </div>
-    </footer>
+    </section>
 
-    <!-- Floating WhatsApp CTA -->
-    <a href="https://wa.me/5567996973773?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="floating-whatsapp" target="_blank" rel="noopener" aria-label="Agendar via WhatsApp">
-      <i class="ph-fill ph-whatsapp-logo"></i>
-      <span class="floating-text">Agendar</span>
-    </a>
+    <!-- 5. About Authority -->
+    <section class="section bg-light" id="sobre">
+      <div class="container">
+        <div class="split-layout reverse">
+          <div class="layout-text">
+            <span class="badge">Nossa Essência</span>
+            <h2 class="section-title">Cuidado que vai além do atendimento</h2>
+            <p>Na Clínica Guaicurus, você não é apenas mais um paciente.</p>
+            <p>Nosso foco está em oferecer um atendimento organizado, ágil e realmente atencioso — desde o primeiro
+              contato até a finalização do seu exame ou consulta.</p>
+            <p>Ambiente limpo, equipe preparada e um padrão de atendimento que prioriza respeito, clareza e atenção em
+              cada detalhe.</p>
+          </div>
+          <div class="layout-image">
+            <div class="image-mock placeholder-about">
+              <img src="/clinica_por_fora-600.webp"
+                srcset="/clinica_por_fora-400.webp 400w, /clinica_por_fora-600.webp 600w"
+                sizes="(max-width: 768px) 100vw, 50vw" alt="Edifício e fachada da Clínica Guaicurus" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+    <!-- 5.5 Fast WhatsApp Promise (Addressing inconsistency issue) -->
+    <section class="section whatsapp-promise">
+      <div class="container text-center">
+        <div class="promise-box">
+          <div class="promise-icon"><i class="ph-fill ph-rocket-launch"></i></div>
+          <h2>Atendimento Rápido e Organizado</h2>
+          <p>Nós sabemos que a sua saúde não pode esperar. Por isso, reestruturamos nosso atendimento via WhatsApp.
+            Contamos com um <strong>fluxo de triagem inteligente e equipe pronta</strong> para garantir que você receba
+            uma resposta ágil e objetiva assim que enviar a sua mensagem.</p>
+          <a href="https://wa.me/5567996973773?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta"
+            class="btn btn-primary mt-2" target="_blank" rel="noopener">
+            <i class="ph-fill ph-whatsapp-logo"></i> Teste a nossa rapidez agora
+          </a>
+          <span class="microcopy mt-1 d-block"><i class="ph ph-clock"></i> Agende em menos de 1 minuto</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Reviews -->
+    <section class="section" id="avaliacoes">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">O que dizem nossos pacientes</h2>
+          <p class="section-subtitle">A confiança de quem já experimentou o nosso acolhimento.</p>
+        </div>
+        <div class="grid reviews-grid">
+          <div class="review-card">
+            <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+            <p class="review-text">"Ambiente limpo e super aconchegante! Fiquei impressionada com o carinho desde a
+              recepção até a consulta. O atendimento é realmente humanizado."</p>
+            <span class="review-author">Gabriela Souza</span>
+          </div>
+          <div class="review-card">
+            <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+            <p class="review-text">"Os profissionais são excepcionais, muito atenciosos e competentes. Passam uma
+              segurança que a gente raramente vê. Recomendo de olhos fechados!"</p>
+            <span class="review-author">Marcos Antônio</span>
+          </div>
+          <div class="review-card">
+            <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+            <p class="review-text">"A agilidade nos exames me surpreendeu. Tudo organizado, lugar maravilhoso e a
+              recepção muito educada. Clínica excelente."</p>
+            <span class="review-author">Juliana Freitas</span>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a href="https://wa.me/5567996973773?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta"
+            class="btn btn-primary" target="_blank" rel="noopener">
+            <i class="ph-fill ph-whatsapp-logo"></i> Fazer seu Agendamento
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section class="section bg-light" id="faq">
+      <div class="container max-w-md mx-auto">
+        <div class="section-header text-center">
+          <h2 class="section-title">Perguntas Frequentes</h2>
+        </div>
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question">Vocês aceitam convênio médico e odontológico? <i
+                class="ph ph-caret-down"></i></button>
+            <div class="faq-answer">
+              <p>Atendemos diversos convênios e também oferecemos condições especiais para consultas particulares. Entre
+                em contato via WhatsApp para confirmar se o seu plano é aceito.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Como faço para agendar uma consulta? <i class="ph ph-caret-down"></i></button>
+            <div class="faq-answer">
+              <p>Você pode agendar de forma rápida clicando em qualquer botão de WhatsApp. Nossa equipe utiliza um
+                sistema de triagem ágil para garantir seu agendamento em instantes.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Quais tipos de exames vocês realizam? <i class="ph ph-caret-down"></i></button>
+            <div class="faq-answer">
+              <p>Realizamos uma ampla gama de exames laboratoriais completos (sangue, urina, etc) e também principais
+                exames de imagem. Tudo centralizado para sua comodidade.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Qual é o horário de atendimento? <i class="ph ph-caret-down"></i></button>
+            <div class="faq-answer">
+              <p>Atendemos de segunda a sábado. Ficamos abertos até as 11:00, e reabrimos no período da tarde, a partir
+                das 13:00.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Location -->
+    <section class="section" id="localizacao">
+      <div class="container">
+        <div class="split-layout">
+          <div class="layout-text">
+            <h2 class="section-title">Onde Estamos</h2>
+            <p>Venha nos visitar em um espaço moderno e aconchegante preparado especialmente para você e sua família.
+            </p>
+            <div class="contact-info">
+              <p><i class="ph-fill ph-map-pin"></i> Av. Guaicurus, 1383 - Jardim Universitário, Campo Grande - MS,
+                79063-080</p>
+              <p><i class="ph-fill ph-clock"></i> Segunda a Sábado<br><span style="padding-left: 24px;">07:00 às 11:00 -
+                  13:00 às 18:00</span></p>
+              <p><i class="ph-fill ph-phone"></i> (67) 99697-3773</p>
+            </div>
+            <a href="https://maps.google.com/?q=Av.+Guaicurus,+1383+-+Jardim+Universitário,+Campo+Grande+-+MS,+79063-080"
+              target="_blank" rel="noopener" class="btn btn-outline mt-2">
+              <i class="ph ph-map-trifold"></i> Traçar Rota no Mapa
+            </a>
+          </div>
+          <div class="layout-image map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3736.2646!2d-54.5939763!3d-20.5054942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDMwJzE5LjgiUyA1NMKwMzUnMzguMyJX!5e0!3m2!1spt-BR!2sbr!4v1600000000000"
+              width="100%" height="400" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <h3>Clínica Guaicurus</h3>
+        <p>Medicina, Odontologia e Exames.</p>
+        <p class="mt-2 text-sm">O cuidado que você merece em Campo Grande.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Acesso Rápido</h4>
+        <a href="#servicos">Serviços</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#avaliacoes">Avaliações</a>
+      </div>
+      <div class="footer-cta text-center">
+        <p class="mb-2">Pronto para agendar?</p>
+        <a href="https://wa.me/5567996973773?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta"
+          class="btn btn-primary" target="_blank" rel="noopener">
+          <i class="ph-fill ph-whatsapp-logo"></i> Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      <p>&copy;
+        <script>document.write(new Date().getFullYear())</script> Clínica Guaicurus. Todos os direitos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/5567996973773?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="floating-whatsapp"
+    target="_blank" rel="noopener" aria-label="Agendar via WhatsApp">
+    <i class="ph-fill ph-whatsapp-logo"></i>
+    <span class="floating-text">Agendar</span>
+  </a>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>
