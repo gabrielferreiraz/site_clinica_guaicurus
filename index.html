@@ -72,16 +72,32 @@
         box-shadow: 0 1px 3px rgba(0,0,0,0.05);
       }
       .logo {
-        font-size: 1.25rem;
-        font-weight: 700;
-        color: var(--primary);
         text-decoration: none;
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.75rem;
+      }
+      .brand-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .brand-name {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--primary);
+        line-height: 1.1;
+      }
+      .brand-slogan {
+        font-size: 0.7rem;
+        font-weight: 500;
+        color: var(--text-light);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-top: 0.125rem;
       }
       .header-logo {
-        height: 60px;
+        height: 55px;
         width: auto;
         object-fit: contain;
       }
@@ -151,7 +167,10 @@
     <header class="navbar">
       <a href="#" class="logo">
         <img src="/logo-200.webp" alt="Logo Clínica Guaicurus" class="header-logo" width="200" height="auto" />
-        Clínica Guaicurus
+        <div class="brand-text">
+          <span class="brand-name">Clínica Guaicurus</span>
+          <span class="brand-slogan">Saúde integrada</span>
+        </div>
       </a>
       <nav class="nav-links desktop-only">
         <a href="#servicos">Serviços</a>
@@ -160,7 +179,7 @@
         <a href="#avaliacoes">Avaliações</a>
       </nav>
       <a href="https://wa.me/5567996973773?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="btn btn-primary nav-cta desktop-only" target="_blank" rel="noopener">
-        <i class="ph-fill ph-whatsapp"></i> Agendar
+        <i class="ph-fill ph-whatsapp-logo"></i> Agendar
       </a>
       <button class="hamburger mobile-only" aria-label="Menu" id="mobile-menu-btn">
         <i class="ph ph-list" style="font-size: 1.8rem;"></i>
@@ -183,7 +202,7 @@
         <a href="#localizacao" class="mobile-link">Localização</a>
       </nav>
       <a href="https://wa.me/5567996973773?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="btn btn-primary mobile-menu-cta" target="_blank" rel="noopener">
-        <i class="ph-fill ph-whatsapp"></i> Agendar Consulta
+        <i class="ph-fill ph-whatsapp-logo"></i> Agendar Consulta
       </a>
     </div>
 
@@ -198,7 +217,7 @@
           <p class="hero-description">Clínica completa com consultas, odontologia e exames laboratoriais e de imagem. Nossa equipe é altamente avaliada para oferecer o cuidado que você merece.</p>
           <div class="cta-group">
             <a href="https://wa.me/5567996973773?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="btn btn-primary btn-large" target="_blank" rel="noopener">
-              <i class="ph-fill ph-whatsapp"></i> Agendar Consulta
+              <i class="ph-fill ph-whatsapp-logo"></i> Agendar Consulta
             </a>
             <span class="microcopy"><i class="ph ph-clock"></i> Resposta rápida pelo WhatsApp</span>
           </div>
@@ -372,7 +391,7 @@
             <h2>Atendimento Rápido e Organizado</h2>
             <p>Nós sabemos que a sua saúde não pode esperar. Por isso, reestruturamos nosso atendimento via WhatsApp. Contamos com um <strong>fluxo de triagem inteligente e equipe pronta</strong> para garantir que você receba uma resposta ágil e objetiva assim que enviar a sua mensagem.</p>
             <a href="https://wa.me/5567996973773?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="btn btn-primary mt-2" target="_blank" rel="noopener">
-              <i class="ph-fill ph-whatsapp"></i> Teste a nossa rapidez agora
+              <i class="ph-fill ph-whatsapp-logo"></i> Teste a nossa rapidez agora
             </a>
             <span class="microcopy mt-1 d-block"><i class="ph ph-clock"></i> Agende em menos de 1 minuto</span>
           </div>
@@ -405,7 +424,7 @@
           </div>
           <div class="text-center mt-4">
              <a href="https://wa.me/5567996973773?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="btn btn-primary" target="_blank" rel="noopener">
-              <i class="ph-fill ph-whatsapp"></i> Fazer seu Agendamento
+              <i class="ph-fill ph-whatsapp-logo"></i> Fazer seu Agendamento
             </a>
           </div>
         </div>
