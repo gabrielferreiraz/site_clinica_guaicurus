@@ -346,6 +346,21 @@ p {
   color: var(--text-color);
   text-decoration: none;
   cursor: pointer;
+  position: relative;
+}
+.click-hint-icon {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 28px;
+  height: auto;
+  pointer-events: none;
+  animation: click-hint-bounce 1.5s infinite ease-in-out;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+@keyframes click-hint-bounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(10px) scale(0.9); }
 }
 .service-action-card:active {
   transform: scale(0.97);
